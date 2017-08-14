@@ -3,6 +3,8 @@ var userInput = 20;
 $(document).ready(function () {
   makeGrid(userInput);
   resize(userInput);
+
+  $(window).resize(function () { resize(userInput) });
 });
 
 
@@ -39,5 +41,4 @@ function sizeGrid(shortSide) {
 
   block.height(blockSize - 3);
   block.width(blockSize - 3);
-
 }
