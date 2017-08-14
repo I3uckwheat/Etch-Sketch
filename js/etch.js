@@ -1,16 +1,12 @@
-
-
-var userInput = 50;
+var userInput = 16;
 
 $(document).ready(function () {
-  makeGrid(userInput);
-  resize(userInput);
-
-  $(".block").on("mouseenter", function () {
-    $(this).css("background-color", "black");
-  })
+  makeGrid(16);
+  drawPixils();
 
   $(window).resize(function () { resize(userInput) });
+
+  $("input").on("click", function () { resetAndSize() });
 });
 
 
@@ -25,6 +21,7 @@ function makeGrid(input) {
     }
     rowNumber++;
   }
+  resize(input);
 }
 
 function resize(input) {
@@ -50,7 +47,27 @@ function sizeGrid(shortSide) {
 
   block.height(blockSize);
   block.width(blockSize);
+}
 
+function drawPixils() {
+  $(".block").on("mouseenter", function () {
+    $(this).css("background-color", "black");
+  })
+}
 
+function resetAndSize() {
+  var block = $(".block");
+  var row = $(".row");
 
+  block.css("background-color", "white");
+
+  userInput = prompt("Enter prefered resolution");
+
+  while (isNaN(userInput)) {
+    userInput = prompt("Please enter an integer");
+  }
+
+  $(".row").remove();
+  makeGrid(userInput);
+  drawPixils();
 }
