@@ -19,3 +19,10 @@ body {
    border: 3px solid black;
    margin: auto;
 }
+
+#buttonWrapper {
+  border: 1px solid red;
+  float: left;
+  margin-top: 10%;
+  margin-left: 50px;
+}
