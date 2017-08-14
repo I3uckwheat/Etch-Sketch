@@ -48,8 +48,3 @@ function sizeGrid(shortSide) {
   block.height(blockSize - 3);
   block.width(blockSize - 3);
 }
-
-function boxColorChange() {
-  alert($(this).contents());
-  $(this).addClass(".change");
-}
