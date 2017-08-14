@@ -1,9 +1,10 @@
+
+
 var userInput = 20;
 
 $(document).ready(function () {
   makeGrid(userInput);
   resize(userInput);
-
   $(window).resize(function () { resize(userInput) });
 });
 
