@@ -1,10 +1,18 @@
+body {
+  padding: 100px;
+}
+
 .row {
-  width: 100%;
+  width: 95%;
+  margin: auto;
+  padding: 0px 10px;
 }
 
 .block {
-
-  height: 1px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 6.25%;
+  height: 10px; /*use math in etch .js*/
   display: inline-block;
   background-color: blue;
 }
