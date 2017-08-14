@@ -1,7 +1,8 @@
-var userinput = 16;
+var userInput = 16;
 
 $(document).ready(function () {
-  makeGrid(userinput);
+  makeGrid(userInput);
+  sizeGrid(useinput);
 });
 
 
@@ -16,4 +17,9 @@ function makeGrid(input) {
     }
     rowNumber++;
   }
+}
+
+function sizeGrid(input) {
+  var background = "#4cf"
+  $(".block").css("background-color", background);
 }
