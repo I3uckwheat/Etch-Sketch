@@ -1,6 +1,6 @@
 
 
-var userInput = 25;
+var userInput = 50;
 
 $(document).ready(function () {
   makeGrid(userInput);
@@ -39,12 +39,18 @@ function resize(input) {
 }
 
 function sizeGrid(shortSide) {
+
   var block = $(".block");
-  var blockSize = shortSide / userInput;
+  var grid = $(".grid");
 
-  console.log("short side: " + shortSide);
-  console.log(blockSize);
+  grid.width(shortSide - 10);
+  grid.height(shortSide - 10);
 
-  block.height(blockSize - 3);
-  block.width(blockSize - 3);
+  var blockSize = grid.width() / userInput;
+
+  block.height(blockSize);
+  block.width(blockSize);
+
+
+
 }
