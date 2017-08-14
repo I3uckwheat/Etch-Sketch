@@ -1,7 +1,10 @@
-body {
-  border: 1px solid black;
+.row {
+  width: 100%;
 }
 
-.row {
+.block {
+
+  height: 1px;
   display: inline-block;
+  background-color: blue;
 }
