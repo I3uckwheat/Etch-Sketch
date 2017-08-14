@@ -1,11 +1,11 @@
 var userinput = 16;
 
 $(document).ready(function () {
-  makeRows(userinput);
+  makeGrid(userinput);
 });
 
 
-function makeRows(input) {
+function makeGrid(input) {
   var container = $(".grid");
   var rowNumber = 1;
 
