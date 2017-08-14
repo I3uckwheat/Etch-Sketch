@@ -4,17 +4,19 @@ body {
 
 
 .row {
-  width: 95%;
   margin: 0;
   padding: -3px 0px;
-  text-align: center;
   font-size: 0;
 }
 
 .block {
   box-sizing: border-box;
-  height: 100%;
   display: inline-block;
   vertical-align: top;
   background-color: white;
+}
+
+.grid {
+   border: 1px solid black;
+
 }
