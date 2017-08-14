@@ -1,8 +1,8 @@
-var userInput = 16;
+var userInput = 20;
 
 $(document).ready(function () {
   makeGrid(userInput);
-  sizeGrid(useinput);
+  resize(userInput);
 });
 
 
@@ -19,7 +19,25 @@ function makeGrid(input) {
   }
 }
 
-function sizeGrid(input) {
-  var background = "#4cf"
-  $(".block").css("background-color", background);
+function resize(input) {
+  var blockHeight = window.innerHeight;
+  var blockWidth = window.innerWidth;
+
+  if (blockHeight < blockWidth) {
+    sizeGrid(blockHeight);
+  } else {
+    sizeGrid(blockWidth);
+  }
+}
+
+function sizeGrid(shortSide) {
+  var block = $(".block");
+  var blockSize = shortSide / userInput;
+
+  console.log("short side: " + shortSide);
+  console.log(blockSize);
+
+  block.height(blockSize - 3);
+  block.width(blockSize - 3);
+
 }
