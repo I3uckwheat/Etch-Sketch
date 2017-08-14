@@ -7,7 +7,7 @@ $(document).ready(function () {
   resize(userInput);
 
   $(".block").on("mouseenter", function () {
-    $(this).css("background-color", "red");
+    $(this).css("background-color", "black");
   })
 
   $(window).resize(function () { resize(userInput) });
