@@ -1,10 +1,15 @@
 
 
-var userInput = 20;
+var userInput = 100;
 
 $(document).ready(function () {
   makeGrid(userInput);
   resize(userInput);
+
+  $(".block").on("mouseenter", function () {
+    $(this).css("background-color", "red");
+  })
+
   $(window).resize(function () { resize(userInput) });
 });
 
@@ -42,4 +47,9 @@ function sizeGrid(shortSide) {
 
   block.height(blockSize - 3);
   block.width(blockSize - 3);
+}
+
+function boxColorChange() {
+  alert($(this).contents());
+  $(this).addClass(".change");
 }
