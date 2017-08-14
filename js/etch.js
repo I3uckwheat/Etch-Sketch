@@ -1,6 +1,6 @@
 
 
-var userInput = 100;
+var userInput = 25;
 
 $(document).ready(function () {
   makeGrid(userInput);
